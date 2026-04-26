@@ -1,0 +1,29 @@
+#main-content{
+  background-color: rosybrown;
+  position: fixed;
+  left: 300px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+#side-bar{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0px;
+  background-color: white;
+  width: 72px;
+  
+  
+}
+body{
+  margin: 0;
+  padding-top: 80px;
+  padding-left: 96px;
+  padding-right: 24px;
+}
+#photoCV{
+  width: 120px;
+  height: 240px;
+  object-fit: cover;
+}
