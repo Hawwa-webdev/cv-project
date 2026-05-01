@@ -5,66 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon cv</title>
   <link rel="stylesheet" href="cv.css">
+  <link rel="stylesheet" href="sideBar.css">
+  <link rel="stylesheet" href="main-content.css">
 </head>
 <body>
-  <section id="main-content">
+  <main id="cv-content">
 
-    <div>
-      <h2>Présentation</h2>
-    <h3>Profil</h3>
-    <p id="description">je suis etudiante en</p>
-    </div>
-    
-    <div>
-      <h2>Formation</h2>
-      <p id="formation"></p>
-    </div>
-
-    <div>
-      <h2>Experience profesionnelle</h2>
-      <p id="experience"></p>
-      
-    </div>
-    
-  </section>
-
- <!--side-bar-->
-
+    <!--side-bar-->
   <section id="side-bar">
     
-    <div id="profil">
       <!--la photo-->
-    <div>
-      <img id="photoCV" src="" alt="Photo de profil" >
-    </div>
+      <img id="photo-CV" src="" alt="Photo de profil" >
 
     <!--la presentation-->
     <div>
-    <h1 id="prenomNom">le nom et le prenom</h1>
-    <h3 id="titre">titre professionnele</h3>
+    <h1 id="prenomNom-cv">le nom et le prenom</h1>
+    <h3 id="titre-cv">titre professionnele</h3>
     </div>
     </div>
 
     <!--coordonnées-->
     <div>
       <h2>Coordonnées</h2>
-      <p id="email">cv.email@gmail.com</p>
-      <p id="telephone">123456789</p>
-      <p id="address">Bambey</p>
+      <p id="email-cv">cvemail@gmail.com</p>
+      <p id="telephone-cv">123456789</p> 
+      <p id="address-cv">Bambey</p>
     </div>
-    <!--les competences-->
     <div>
+      <!--skills-->
+      <h2>Compétences</h2>
       <ul id="competences--">
+        
       </ul>
     </div>
 
     <!--langues maitrisees-->
     <div>
       <h2>Langues</h2>
-      <p id="langues">Francais</p>
+      <p id="langues-cv">Francais</p>
     </div>
 
   </section>
+
+    <section id="main-content">
+    <div>
+      <h2>Présentation</h2>
+    <h3>Profil</h3>
+    <p id="description-cv">je suis etudiante retraitée</p>
+    </div>
+    
+    <div>
+      <h2>Formation</h2>
+      <p id="formation-cv"></p>
+    </div>
+
+    <div>
+      <h2>Experience profesionnelle</h2>
+      <p id="experience-cv"></p>
+      
+    </div>
+    
+  </section>
+
+  </main>
+  <button id="download">Télécharger le CV</button>
   
+  <Script src="cv.js"></Script>
 </body>
 </html>
