@@ -1,0 +1,89 @@
+body {
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  margin: 0;
+  background-color: rgb(250, 250, 250);
+  color: rgb(17, 17, 17);
+}
+
+.entete{
+  padding: 70px 20px 40px;
+}
+
+.entete h1{
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: -1;
+  margin: 0;
+}
+
+.slogan {
+  font-size: 16px;
+  color: rgb(102, 102, 102);
+}
+
+.presentation {
+  padding: 10px 20px 30px;
+  margin: 0 auto;
+  max-width: 600px;
+  color: rgb(68, 68, 68);
+  line-height: 1.5;
+}
+ 
+.templates-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 20px;
+  flex-wrap: wrap;
+}
+
+.template {
+  background-color: white;
+  width: 220px;
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid rgb(238, 238, 238);
+  transition: 0.2 ease;
+}
+
+.template :hover{
+  transform: translateY(-4px);
+}
+
+.template img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.template h3{
+  margin: 10px 0px 5px;
+  font-size: 16px;
+}
+
+.template p{
+  color: rgb(102, 102, 102);
+  margin: 0px 0px 10px;
+  font-size: 13px;
+}
+
+button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgb(17, 17, 17);
+  background: transparent;
+  color:  rgb(17, 17, 17);
+  cursor: pointer;
+  transition: 0.2 ease;
+}
+
+button :hover {
+  background-color:  rgb(17, 17, 17);
+  color: white;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  color: rgb(136, 136, 136);
+}

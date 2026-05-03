@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon cv</title>
   <link rel="stylesheet" href="cv.css">
-  <link rel="stylesheet" href="sideBar.css">
-  <link rel="stylesheet" href="main-content.css">
+  <link id="modele" rel="stylesheet" href="css/template1.css">
+
+  <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">
+  </script>
 </head>
 <body>
   <main id="cv-content">
@@ -68,7 +71,7 @@
   </section>
 
   </main>
-  <button id="download">Télécharger le CV</button>
+  <button id="download" value="Create pdf" onclick="generatePDF()">Télécharger le CV</button>
   
   <Script src="cv.js"></Script>
 </body>
