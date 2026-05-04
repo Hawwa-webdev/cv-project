@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/homePage.css">
+  <title>SAMA-CV</title>
 </head>
 <body>
-    
+
+  <header class="entete">
+    <h1>SAMA CV</h1>
+    <p>Construit ce qui te représente</p>
+  </header>
+
+  <section class="presentation--">
+    <h2>Créer votre CV en quelques click</h2>
+    <p class="slogan">Choisissez un modéle, remplissez vos informations, générer et télécharger votre CV en quelques minutes</p>
+  </section>
+
+  <!--les templates-->
+  <main class="templates-content">
+
+    <div class="template">
+      <img src="" alt="template classique">
+      <h3>Classique</h3>
+      <p>Simple et professionnel</p>
+      <button onclick="choixTemplate('template1')">Choisir</button>
+    </div>
+
+     <div class="template">
+      <img src="" alt="template classique">
+      <h3>Minimal</h3>
+      <p>Simple, propre, efficace</p>
+      <button onclick="choixTemplate('template2')">Choisir</button>
+    </div>
+
+     <div class="template">
+      <img src="" alt="template classique">
+      <h3>Moderne</h3>
+      <p>design éléganr et dynamique</p>
+        <button onclick="choixTemplate('template3')">Choisir</button>
+    </div>
+  </main>
+   <FOOter>
+    <p>&copy; 2026 SAMA CV - Tous droits réservés></p>
+  </FOOter>
+  <script src="cv.js"></script>
+
 </body>
 </html>

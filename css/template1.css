@@ -1,0 +1,128 @@
+/*generale*/
+body{
+  margin: 0;
+  background-color:rgb(241, 245, 249);
+  
+}
+#cv-content{
+  width: 794px;
+  height: 1123px;
+  margin: 20px auto;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  box-shadow: 0 10px 30px rgba(15,23, 45, 0.15);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+section{
+  margin-bottom: 20px;
+}
+#download{
+  background-color: rgb(15, 23, 43);
+  border: 1px solid rgb(52, 65, 85);
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: white;
+  box-shadow: 0 5px 15px rgba(15, 23, 42, 0.2);
+
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#download:hover{
+  background-color:  rgb(30, 41, 58);
+  transform: translateY(-2px);
+}
+#download:active{
+  transform: translateY(0px);
+}
+
+
+/*side bar*/ 
+#side-bar{
+  width: 280px;
+  height: 1123px;
+  padding: 25px;
+  color: white;
+  background-color: rgb(30,41 ,59);
+
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+#photo-cv{
+  margin: 10px auto;
+  height: 160px;
+  width: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+  border: 2px solid rgb(148,163 ,184 );
+}
+
+#prenomNom-cv{
+  margin: 10px 0 5px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#titre-cv{
+  font-size: 13px;
+  color:rgb(203,213 ,225 ); 
+  text-align: center;
+}
+
+#side-bar h3{
+  color: rgb(226, 232, 240);
+  font-size: 13px;
+  margin-top: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px, solid rgb(71, 85, 105);
+}
+#side-bar p, #side-bar ul{
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgb(226, 232, 240);
+}
+/*main-content*/ 
+
+#main-content{
+  width: 514px;
+  height: 1123px;
+  background-color: rgb(248, 250, 252);
+  padding: 30px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+#main-content div{
+  padding-bottom: 10px;
+}
+#main-content h2{
+  font-size: 18px;
+  color: rgb(15, 23, 42);
+  
+}
+#main-content h3{
+  font-size: 14px;
+  color: rgb(51, 65, 85);
+  margin-bottom: 5px;
+}
+#main-content P{
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgb(71, 85, 105);
+}
