@@ -1,78 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon cv</title>
-  <link rel="stylesheet" href="cv.css">
+  <link rel="stylesheet" href="css/cv.css">
   <link id="modele" rel="stylesheet" href="css/template1.css">
-
-  <script 
-    src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
   <main id="cv-content">
+    <section id="side-bar">
+      <div>
+        <h1 id="prenomNom-cv">le nom et le prenom</h1>
+        <h3 id="titre-cv">titre professionnele</h3>
+      </div>
 
-    <!--side-bar-->
-  <section id="side-bar">
-    
-      <!--la photo-->
-      <img id="photo-CV" src="" alt="Photo de profil" >
+      <div>
+        <h2>Coordonnées</h2>
+        <p id="email-cv">cvemail@gmail.com</p>
+        <p id="telephone-cv">123456789</p>
+        <p id="address-cv">Bambey</p>
+      </div>
 
-    <!--la presentation-->
-    <div>
-    <h1 id="prenomNom-cv">le nom et le prenom</h1>
-    <h3 id="titre-cv">titre professionnele</h3>
-    </div>
-    </div>
+      <div>
+        <h2>Compétences</h2>
+        <ul id="competences--"></ul>
+      </div>
 
-    <!--coordonnées-->
-    <div>
-      <h2>Coordonnées</h2>
-      <p id="email-cv">cvemail@gmail.com</p>
-      <p id="telephone-cv">123456789</p> 
-      <p id="address-cv">Bambey</p>
-    </div>
-    <div>
-      <!--skills-->
-      <h2>Compétences</h2>
-      <ul id="competences--">
-        
-      </ul>
-    </div>
-
-    <!--langues maitrisees-->
-    <div>
-      <h2>Langues</h2>
-      <p id="langues-cv">Francais</p>
-    </div>
-
-  </section>
+      <div>
+        <h2>Langues</h2>
+        <div id="langues-cv">Francais</div>
+      </div>
+    </section>
 
     <section id="main-content">
-    <div>
-      <h2>Présentation</h2>
-    <h3>Profil</h3>
-    <p id="description-cv">je suis etudiante retraitée</p>
-    </div>
-    
-    <div>
-      <h2>Formation</h2>
-      <p id="formation-cv"></p>
-    </div>
+      <div>
+        <h2>Présentation</h2>
+        <h3>Profil</h3>
+        <p id="description-cv">je suis etudiante retraitée</p>
+      </div>
 
-    <div>
-      <h2>Experience profesionnelle</h2>
-      <p id="experience-cv"></p>
-      
-    </div>
-    
-  </section>
+      <div>
+        <h2>Formation</h2>
+        <p id="formation-cv"></p>
+      </div>
 
+      <div>
+        <h2>Experience profesionnelle</h2>
+        <p id="experience-cv"></p>
+      </div>
+    </section>
   </main>
+
   <button id="download" value="Create pdf" onclick="generatePDF()">Télécharger le CV</button>
-  
-  <Script src="cv.js"></Script>
+
+  <script src="cv.js"></script>
 </body>
 </html>

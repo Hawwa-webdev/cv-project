@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choisir un modèle - Sama CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="templates.css">
+</head>
+<body>
+  <header class="templates-header">
+    <div class="container header-inner">
+      <span class="logo">Sama<strong>CV</strong></span>
+      <a href="index.html" class="btn-back">Retour</a>
+    </div>
+  </header>
+
+  <section class="templates-hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Choisissez votre modèle</h1>
+        <p>Sélectionnez un design qui vous correspond et commencez à remplir vos informations.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="templates-container">
+    <div class="container">
+      <div class="templates-grid">
+        <div class="template-card" data-template="template1">
+          <div class="template-preview">
+            <div class="cv-preview cv-preview-template1">
+              <div class="preview-sidebar"></div>
+              <div class="preview-content">
+                <div class="preview-header"></div>
+                <div class="preview-lines"></div>
+              </div>
+            </div>
+          </div>
+          <div class="template-info">
+            <h3>Classique</h3>
+            <p>Simple et professionnel. Un design intemporel avec une barre latérale.</p>
+            <button class="btn btn-select" onclick="selectTemplate('template1')">
+              <span>Choisir ce modèle</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="template-card template-card-disabled" data-template="template2">
+          <div class="template-preview">
+            <div class="cv-preview cv-preview-template2">
+              <div class="preview-header-top"></div>
+              <div class="preview-content-minimal">
+                <div class="preview-section"></div>
+                <div class="preview-lines-minimal"></div>
+              </div>
+              <div class="template-overlay">Disponible bientôt</div>
+            </div>
+          </div>
+          <div class="template-info">
+            <h3>Minimal</h3>
+            <p>Disponible bientôt.</p>
+            <button class="btn btn-select" type="button" disabled>Disponible bientôt</button>
+          </div>
+        </div>
+
+        <div class="template-card template-card-disabled" data-template="template3">
+          <div class="template-preview">
+            <div class="cv-preview cv-preview-template3">
+              <div class="preview-top-accent"></div>
+              <div class="preview-content-modern">
+                <div class="preview-grid">
+                  <div class="preview-grid-item"></div>
+                  <div class="preview-grid-item"></div>
+                </div>
+              </div>
+              <div class="template-overlay">Disponible bientôt</div>
+            </div>
+          </div>
+          <div class="template-info">
+            <h3>Moderne</h3>
+            <p>Disponible bientôt.</p>
+            <button class="btn btn-select" type="button" disabled>Disponible bientôt</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="templates-info">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-box">
+          <h4>Tous les modèles</h4>
+          <p>sont gratuits et entièrement personnalisables</p>
+        </div>
+        <div class="info-box">
+          <h4>Export PDF</h4>
+          <p>généré en haute qualité, prêt à envoyer</p>
+        </div>
+        <div class="info-box">
+          <h4>Données sécurisées</h4>
+          <p>vos informations restent privées</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="templates-footer">
+    <div class="container">
+      <p>&copy; 2026 Sama CV. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="templates.js"></script>
+</body>
+</html>

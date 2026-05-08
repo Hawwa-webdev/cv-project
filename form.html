@@ -1,73 +1,237 @@
-    <!DOCTYPE html>
-    <html lang="fr">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>formulaire d'un cv</title>
-            <link rel="stylesheet" href="form.css">
-        </head>
-        <body>
-            <div class="container">
-            
-                <form id="form-cv">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remplir mon CV - Sama CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="form.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <div class="form-wrapper">
+    <div class="form-section">
+      <div class="form-header">
+        <span class="logo">Sama<strong>CV</strong></span>
+        <a href="templates.html" class="btn-back">Retour</a>
+      </div>
 
-                    <div class="formCV">
-                        <label for="photo">Photo de CV</label>
-                        <input type="file" id="photo" name="photo"> 
-                    </div>
+      <div class="form-container">
+        <div class="form-progress">
+          <div class="progress-indicator">
+            <span class="progress-step active" data-step="0">1</span>
+            <span class="progress-step" data-step="1">2</span>
+            <span class="progress-step" data-step="2">3</span>
+            <span class="progress-step" data-step="3">4</span>
+            <span class="progress-step" data-step="4">5</span>
+          </div>
+          <p class="progress-label">Étape <span id="current-step">1</span> sur 5</p>
+        </div>
 
-                    <div class="formCV">
-                        <label for="NomPrenom">Prenom et nom</label>
-                        <input type="text" id="NomPrenom" name="prenom" placeholder="Votre prenom et nom">
-                    </div>
-                    
-                    <div class="formCV">
-                        <label for="Titre">Titre</label>
-                        <input type="text" id="Titre" name="Titre" placeholder="Votre titre professionnel">
-                    </div>
+        <form id="form-cv">
+          <section class="form-step" data-step="0">
+            <h2>Informations personnelles</h2>
 
-                    <div class="formCV">
-                        <label for="tel">Numero de telephone</label>
-                        <input type="tel" id="Telephone" name="tel" placeholder="Votre numero de telephone">
-                    </div>
-
-                    <div class="formCV">
-                        <label for="Email">Email</label>
-                        <input type="Email" id="Email" name="Email" placeholder="exemple@gmail.com">
-                    </div>
-
-                    <div class="formCV">
-                        <label for="addresse">Addresse</label>
-                        <input type="text" id="Addresse" name="addresse" placeholder="Votre addresse">
-                    </div>
-
-                    <div class="formCV">
-                        <label for="description">Description</label>
-                        <textarea id="Description" name="description" rows="4" placeholder="Parlez de vous"></textarea>
-                    </div>
-
-                    <div class="formCV">
-                        <label for="formations">Formation</label>
-                        <textarea id="Formations" name="formations" rows="4" placeholder="Vos etudes et diplomes"></textarea>
-                    </div>
-
-                    <div class="formCV">
-                        <label for="competences">Competences</label>
-                        <textarea id="competences" name="competences" rows="3" placeholder="html,css,Js"></textarea>
-                    </div>
-
-                    <div class="formCV">
-                        <label for="Experiences">Experiences</label>
-                        <textarea id="Experiences" name="Experiences"rows="4" placeholder="Vos experiences professionnelles"></textarea>
-                    </div>
-
-                    <div class="formCV">
-                        <label for="Langues">Langues</label>
-                        <textarea id="Langues" name="langues"rows="3" placeholder="Anglais,français,..."></textarea>
-                    </div>
-
-                        <button id="" type="submit">créer mon CV</button>
-               </form>
+            <div class="formCV">
+              <label for="NomPrenom">Prénom et nom</label>
+              <input type="text" id="NomPrenom" name="prenom" placeholder="Fatou Sarr">
             </div>
-        </body>
-    </html>                                                                                                                  
+
+            <div class="formCV">
+              <label for="Titre">Titre professionnel</label>
+              <input type="text" id="Titre" name="Titre" placeholder="Développeur Web">
+            </div>
+
+            <div class="form-row">
+              <div class="formCV">
+                <label for="Email">Email</label>
+                <input type="email" id="Email" name="Email" placeholder="exemple@gmail.com">
+              </div>
+              <div class="formCV">
+                <label for="Telephone">Téléphone</label>
+                <input type="tel" id="Telephone" name="tel" placeholder="+221 77 123 45 67">
+              </div>
+            </div>
+
+            <div class="formCV">
+              <label for="Addresse">Adresse</label>
+              <input type="text" id="Addresse" name="addresse" placeholder="Dakar, Sénégal">
+            </div>
+
+            <div class="formCV">
+              <label for="Description">Présentation</label>
+              <textarea id="Description" name="description" rows="5" placeholder="Parlez de vous, vos objectifs..."></textarea>
+            </div>
+
+            <button type="button" class="step-next btn-primary">Suivant</button>
+          </section>
+
+          <section class="form-step" data-step="1" hidden>
+            <h2>Formations</h2>
+
+            <div class="form-row">
+              <div class="formCV">
+                <label for="formation-debut">Année de début</label>
+                <input type="number" id="formation-debut" min="1950" max="2100" placeholder="2020">
+              </div>
+              <div class="formCV">
+                <label for="formation-fin">Année de fin</label>
+                <input type="number" id="formation-fin" min="1950" max="2100" placeholder="2024">
+              </div>
+            </div>
+
+            <div class="formCV checkbox">
+              <label for="formation-en-cours">
+                <input type="checkbox" id="formation-en-cours">
+                <span>Actuellement en cours</span>
+              </label>
+            </div>
+
+            <div class="formCV">
+              <label for="formation-intitule">Intitulé de la formation</label>
+              <input type="text" id="formation-intitule" placeholder="Licence Informatique">
+            </div>
+
+            <button type="button" id="add-formation" class="btn-add">Ajouter une formation</button>
+            <ul id="formation-list" class="item-list"></ul>
+
+            <div class="form-navigation">
+              <button type="button" class="step-prev btn-secondary">Précédent</button>
+              <button type="button" class="step-next btn-primary">Suivant</button>
+            </div>
+          </section>
+
+          <section class="form-step" data-step="2" hidden>
+            <h2>Compétences</h2>
+
+            <div class="formCV">
+              <label for="competence-intitule">Compétence</label>
+              <input type="text" id="competence-intitule" placeholder="HTML, CSS, JavaScript">
+            </div>
+
+            <button type="button" id="add-competence" class="btn-add">Ajouter une compétence</button>
+            <ul id="competence-list" class="item-list"></ul>
+
+            <div class="form-navigation">
+              <button type="button" class="step-prev btn-secondary">Précédent</button>
+              <button type="button" class="step-next btn-primary">Suivant</button>
+            </div>
+          </section>
+
+          <section class="form-step" data-step="3" hidden>
+            <h2>Expériences professionnelles</h2>
+
+            <div class="form-row">
+              <div class="formCV">
+                <label for="experience-debut">Année de début</label>
+                <input type="number" id="experience-debut" min="1950" max="2100" placeholder="2021">
+              </div>
+              <div class="formCV">
+                <label for="experience-fin">Année de fin</label>
+                <input type="number" id="experience-fin" min="1950" max="2100" placeholder="2024">
+              </div>
+            </div>
+
+            <div class="formCV checkbox">
+              <label for="experience-en-cours">
+                <input type="checkbox" id="experience-en-cours">
+                <span>Actuellement en cours</span>
+              </label>
+            </div>
+
+            <div class="formCV">
+              <label for="experience-intitule">Intitulé de l'expérience</label>
+              <input type="text" id="experience-intitule" placeholder="Développeur Web">
+            </div>
+
+            <button type="button" id="add-experience" class="btn-add">Ajouter une expérience</button>
+            <ul id="experience-list" class="item-list"></ul>
+
+            <div class="form-navigation">
+              <button type="button" class="step-prev btn-secondary">Précédent</button>
+              <button type="button" class="step-next btn-primary">Suivant</button>
+            </div>
+          </section>
+
+          <section class="form-step" data-step="4" hidden>
+            <h2>Langues</h2>
+
+            <div class="form-row">
+              <div class="formCV">
+                <label for="langue-intitule">Langue</label>
+                <input type="text" id="langue-intitule" placeholder="Français">
+              </div>
+              <div class="formCV">
+                <label for="langue-niveau">Niveau</label>
+                <select id="langue-niveau">
+                  <option value="">Choisir un niveau</option>
+                  <option value="Débrouille">Débrouille</option>
+                  <option value="Intermédiaire">Intermédiaire</option>
+                  <option value="Courant">Courant</option>
+                  <option value="Bilingue">Bilingue</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="button" id="add-langue" class="btn-add">Ajouter une langue</button>
+            <ul id="langue-list" class="item-list"></ul>
+
+            <div class="form-navigation">
+              <button type="button" class="step-prev btn-secondary">Précédent</button>
+              <button type="submit" class="btn-primary">Générer mon CV</button>
+            </div>
+          </section>
+        </form>
+      </div>
+    </div>
+
+    <div class="cv-preview-section">
+      <div class="preview-header">
+        <h3>Aperçu</h3>
+        <button id="download-btn" class="btn-download">Télécharger PDF</button>
+      </div>
+      <div id="cv-preview-container" class="cv-preview-container">
+        <div id="cv-content" class="cv-preview-content">
+          <section id="side-bar">
+            <div>
+              <h1 id="prenomNom-cv">Nom Prénom</h1>
+              <h3 id="titre-cv">Titre</h3>
+            </div>
+            <div>
+              <h2>Coordonnées</h2>
+              <p id="email-cv">email@gmail.com</p>
+              <p id="telephone-cv">+221 76 123 34 56</p>
+              <p id="address-cv">Dakar, Sénégal</p>
+            </div>
+            <div>
+              <h2>Compétences</h2>
+              <ul id="competences--"></ul>
+            </div>
+            <div>
+              <h2>Langues</h2>
+              <div id="langues-cv"></div>
+            </div>
+          </section>
+
+          <section id="main-content">
+            <div>
+              <h2>Présentation</h2>
+              <p id="description-cv">Parlez de vous</p>
+            </div>
+            <div>
+              <h2>Formation</h2>
+              <div id="formation-cv"></div>
+            </div>
+            <div>
+              <h2>Expérience professionnelle</h2>
+              <div id="experience-cv"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="cv.js"></script>
+</body>
+</html>

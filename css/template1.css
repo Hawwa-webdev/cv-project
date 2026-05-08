@@ -1,128 +1,140 @@
-/*generale*/
-body{
-  margin: 0;
-  background-color:rgb(241, 245, 249);
-  
+/* TEMPLATE 1 - CLASSIQUE */
+
+#cv-content {
+  width: 794px !important;
+  min-height: 1123px !important;
+  display: flex !important;
+  overflow: hidden !important;
+  background: #ffffff;
 }
-#cv-content{
-  width: 794px;
-  height: 1123px;
-  margin: 20px auto;
-  background-color: rgb(255, 255, 255);
+
+#side-bar {
+  width: 280px;
+  flex: 0 0 280px;
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 24px 18px;
   display: flex;
-  box-shadow: 0 10px 30px rgba(15,23, 45, 0.15);
-  border-radius: 6px;
+  flex-direction: column;
+  gap: 16px;
   overflow: hidden;
 }
 
-section{
-  margin-bottom: 20px;
-}
-#download{
-  background-color: rgb(15, 23, 43);
-  border: 1px solid rgb(52, 65, 85);
-  padding: 12px 20px;
-  font-size: 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  color: white;
-  box-shadow: 0 5px 15px rgba(15, 23, 42, 0.2);
-
-  position: fixed;
-  top: 10px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-#download:hover{
-  background-color:  rgb(30, 41, 58);
-  transform: translateY(-2px);
-}
-#download:active{
-  transform: translateY(0px);
-}
-
-
-/*side bar*/ 
-#side-bar{
-  width: 280px;
-  height: 1123px;
-  padding: 25px;
-  color: white;
-  background-color: rgb(30,41 ,59);
-
-  
-  display: flex;
-  flex-direction: column;
-  gap: 20px; 
-}
-
-#photo-cv{
-  margin: 10px auto;
-  height: 160px;
-  width: 120px;
-  border-radius: 10px;
-  object-fit: cover;
-  display: block;
-  border: 2px solid rgb(148,163 ,184 );
-}
-
-#prenomNom-cv{
-  margin: 10px 0 5px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-#titre-cv{
-  font-size: 13px;
-  color:rgb(203,213 ,225 ); 
-  text-align: center;
-}
-
-#side-bar h3{
-  color: rgb(226, 232, 240);
-  font-size: 13px;
-  margin-top: 20px;
-  padding-bottom: 5px;
-  border-bottom: 1px, solid rgb(71, 85, 105);
-}
-#side-bar p, #side-bar ul{
-  font-size: 13px;
-  line-height: 1.5;
-  color: rgb(226, 232, 240);
-}
-/*main-content*/ 
-
-#main-content{
-  width: 514px;
-  height: 1123px;
-  background-color: rgb(248, 250, 252);
-  padding: 30px;
-  box-sizing: border-box;
-
-  display: flex;
-  flex-direction: column;
-  gap: 20px; 
-}
-
-#main-content div{
-  padding-bottom: 10px;
-}
-#main-content h2{
+#prenomNom-cv {
   font-size: 18px;
-  color: rgb(15, 23, 42);
-  
+  font-weight: 700;
+  margin: 0;
+  color: #ecf0f1;
+  line-height: 1.2;
 }
-#main-content h3{
-  font-size: 14px;
-  color: rgb(51, 65, 85);
-  margin-bottom: 5px;
+
+#titre-cv {
+  font-size: 12px;
+  color: #bdc3c7;
+  margin: 4px 0 0;
+  font-weight: 400;
 }
-#main-content P{
+
+#side-bar h2 {
   font-size: 13px;
-  line-height: 1.6;
-  color: rgb(71, 85, 105);
+  font-weight: 700;
+  color: #ecf0f1;
+  margin: 12px 0 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(236, 240, 241, 0.2);
+}
+
+#side-bar p,
+#side-bar div > div {
+  font-size: 11px;
+  color: #bdc3c7;
+  margin: 0 0 4px;
+  line-height: 1.5;
+}
+
+#competences-- {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#competences-- li {
+  font-size: 11px;
+  color: #bdc3c7;
+  margin: 0 0 4px;
+  padding-left: 12px;
+  position: relative;
+}
+
+#competences-- li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+}
+
+#langues-cv {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#langues-cv div {
+  font-size: 11px;
+  color: #bdc3c7;
+  line-height: 1.4;
+}
+
+#main-content {
+  flex: 1;
+  min-width: 0;
+  background: #f8f9fa;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+}
+
+#main-content h2 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #2c3e50;
+}
+
+#main-content h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #34495e;
+  margin: 6px 0 2px;
+}
+
+#main-content p,
+#main-content div > div {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.5;
+  margin: 0 0 2px;
+}
+
+#description-cv,
+#formation-cv,
+#experience-cv {
+  margin: 0;
+}
+
+#formation-cv div,
+#experience-cv div {
+  font-size: 11px;
+  color: #555;
+  margin: 4px 0;
+  line-height: 1.5;
+}
+
+@media print {
+  #cv-content {
+    box-shadow: none;
+  }
 }
